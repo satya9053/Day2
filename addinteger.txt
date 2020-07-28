@@ -1,0 +1,28 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20200728183637
+Username: CSCMWS\smandapati7
+RunAs User: CSCMWS\smandapati7
+Configuration Name: 
+Machine: IN-5CG0255ZGX (Microsoft Windows NT 10.0.18363.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 4952
+PSVersion: 5.1.18362.752
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.18362.752
+BuildVersion: 10.0.18362.752
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\smandapati7\OneDrive - DXC Production\Documents\PowerShell_transcript.IN-5CG0255ZGX.fC2LxtyW.20200728183637.txt
+PS C:\windows\system32> $a=10
+PS C:\windows\system32> $b=50
+PS C:\windows\system32> $a + $b
+60
+PS C:\windows\system32> stop-transcript
+**********************
+Windows PowerShell transcript end
+End time: 20200728184401
+**********************
