@@ -1,10 +1,3 @@
- Hello World Program in Bash Shell
-
-echo "Hello World!"
-echo "Hi! I am lakshmi"
-echo "I am very happy"
-
-
 #arthmatic operations
 
 val='expr 2 + 2'
