@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="Elements">
+    <h1>
+    Sun
+    </h1>
+  
+    <h2> 
+     Moon
+    </h2>
+</p>
+
+<script>
+function add() {
+  var node = document.createElement("Sun");
+  node.appendChild(textnode);
+  document.getElementById("Elements").appendChild(Moon);
+}
+</script>
+
+</body>
+</html>
+
+###document.getELEmentsID()###
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      New to Java Scripting
+    </title>
+
+    <p id = "demo"></p>
+    <body> 
+      <h1> programing</h1>
+      <h2> Java Script</h2>
+      <h2>Hello JS</h2>
+      <h4>programming is fun</h4>
+    
+     <script>
+      document.getElementById("demo").innerHTML = "satya"+"Mandapati" ;
+     </script>
+     </body>
+  </head>
+</html>
+
+
+###document.elementsByTagName###
+--------------------
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Element by Id
+        </title>
+    </head>
+    <body>
+        <h2>DXC TEchnology</h2>
+        <p>Associate software profwessional</p>
+        <script>
+            document.getElementsByTagName("p");
+            
+        </script>
+    </body>
+</html>
+
+ 
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      New to Java Scripting
+    </title>
+
+    <p id = "demo"></p>
+    <body> 
+      <h1> programing</h1>
+      <h2> Java Script</h2>
+      <h2>Hello JS</h2>
+      <h4>programming is fun</h4>
+    
+     <script>
+      var x,y,z;
+      x=5;
+      y=6;
+      z=8;
+      document.getElementById("demo").innerHTML="the value of z is "+z;
+      console.log(+z);
+      console.log(x+y);
+      // literals in Js
+      // integer and strings
+      var x=10;
+      document.write(x);
+      console.log(x);
+    </script>
+    <script>
+      var firstname , lastname;
+      firstname="java";
+      lastname="scr";
+      document.getElementById("demo").innerHTML=firstname+lastname;
+    </script>
+    </body>
+  </head>
+</html>
+
+#####Loopings####
+
+#conditional
+<!DOCTYPE HTML>
+  <html>
+    <p id="code"></p>
+     <body>
+      <script>  
+         var a=20;  
+         if(a==10) 
+         {document.getElementById("code").innerHTML=("a is equal to 10"); }  
+         else if(a==15) 
+         {document.getElementById("code").innerHTML=("a is equal to 15"); }    
+         else if(a==20)  
+         {document.getElementById("code").innerHTML=("a is equal to 20");  }
+         else  
+         {document.getElementById("code").innerHTML=("a is not equal to 10, 15 or 20");  }
+      </script>
+     </body>
+  </html>
+
+
+####forloopings####
+
+<!DOCTYPE HTML>
+   <html>
+      <p id="code"></p>
+         <body>
+           <script>  
+            #forloop
+            for (i=1; i<=8; i++)  
+            {  
+            document.getElementById("code").innerHTML=(i + " ")  
+            }  
+           </script> 
+        </body> 
+   </html>
+
+
+
+###whileloopings###
+
+ <!DOCTYPE html>
+    <html>
+    <p id="code"></p>
+        <body>
+          <script>  
+           var i=161;  
+           while (i<=26)  
+           {  
+           document.getElementById("code").innerHTML=(i + " ");  
+            i++;  
+            }  
+           </script>  
+        </body>
+    </html>
+
+
+
+###dowhileloopings###
+
+  <!DOCTYPE html>
+     <html>
+       <p id="code"></p>
+          <body>
+             <script>  
+               var i=21;  
+               do
+               {  
+               document.getElementById("code").innerHTML=(i + " ");  
+               i++;  
+               }
+               while (i<=25);  
+            </script>  
+        </body>
+    </html>
+
+
+
+###conditional staements###
+#if-else,elseif-else;
+
+  let money = [];
+     money= [1,2,1,2,3,2,3,1];
+         if (money[0]==1)
+         {
+         console.log("If block Executes, value is 1");
+         }
+
+         if (numb[0]==numb[1])
+         {
+         console.log("value is correct");
+         }
+         else
+         {
+         console.log("try check");
+         }
+
+         if (numb[0] == numb[1])
+         {
+         console.log("if block executes, Value is 1");
+         } 
+         else if (numb[0] == numb[2])  
+         {
+         console.log("Else-If is correct, Value is 1");
+         } 
+         else
+         {
+         console.log("Everything is Incorrect");
+         }
+        
+ ###Switch##
+ 
+  let places="satya.mnandapati";
+    switch(paid) {
+        case "me":
+        console.log("me");
+        break;
+
+        case "getting job":
+        console.log("getting job");
+        break;
+
+        case "DXc Technology":
+        console.log("DXC Technology");
+        break;
+
+        case "job":
+        console.log("job");
+        break;
+
+        default:
+        console.log("working");
+        break;
+
