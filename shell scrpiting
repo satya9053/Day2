@@ -1,0 +1,342 @@
+ Hello World Program in Bash Shell
+
+echo "Hello World!"
+echo "Hi! I am lakshmi"
+echo "I am very happy"
+
+
+#arthmatic operations
+
+val='expr 2 + 2'
+echo 'total value : $val'
+
+a=10
+b=20
+val=`expr $a+$b`
+echo "total value:" $val
+
+a=80
+b=40
+v=`expr $a + $b`
+g=`expr $a - $b`
+m=`expr $a * $b`
+n=`expr $a / $b`
+
+let "sachin = 100+200"
+echo "suchin = $sachin"
+
+a=2
+b=7
+c=$a+$b
+d=$a-$b
+e=$a*$b
+echo $(($c))
+echo $(($d))
+echo $(($e))
+
+n=20
+echo $((n+=30))
+echo $((n-=30))
+echo $((n*=2))
+echo $((n/=33))
+
+#++ pre increment operator
+
+i=30
+echo "per increment : "$((++i+10))
+
+#post increment operator
+i=40
+echo "post increment : "$((i++))
+echo $(($i))
+
+#-- per decrement 
+
+i=5
+echo "per decrement : " $((--i))
+
+#-- post decrement
+i=6
+echo "post decrement" $((i--))
+echo $(($i))
+
+#decision making statements
+
+i="lapi"
+p="computer"
+if [[$i ="lapi" && $p ="pc"]]
+then
+    echo "i have lapi and pc"
+else
+    echo "i have only lapi"
+fi
+
+term= 1
+if [ $term == 1]
+then
+    echo "hi every one"
+else
+    echo "bye"
+fi
+
+# relational operator
+n=50
+if [ $n -eq 50 ] 
+then
+    echo "the no is equal to 50"
+else
+    echo "the no is not equal to 50"
+fi
+
+#gt operator
+if [ $n -gt 2 ]
+then
+    echo "if bolck"
+else
+    echo "else block"
+fi
+
+#ge operator
+g=3
+if[ $g -ge 3 ]
+then
+    echo "true"
+else
+    echo "false"
+fi
+
+#string operator
+s="banana"
+if [ $s = "banana" ]
+then
+    echo "it is banana"
+else
+    echo "it's not banana"
+fi
+
+#== operator
+val=100
+if [ $val == 100 ]
+then
+    echo "equal to 100"
+else
+    echo "not equal to 100"
+fi
+
+#!= operator
+val=100
+if [ $val != 50 ]
+then
+    echo "equal to 50"
+else
+    echo "not equal to 50"
+fi
+
+#< operator
+str1="box"
+str2="pen"
+if [ $str1 < $str2 ]
+then
+    echo "less than"
+else
+    echo "not less than"
+fi
+
+#> operator
+str1="box"
+str2="pen"
+if [ $str1 > $str2 ]
+then
+    echo "less than"
+else
+    echo "not less than"
+fi
+
+#-z length of string is zero
+var=""
+if [ -z $var ]
+then
+    echo "zero"
+else
+    echo "not zero"
+fi
+
+p="pen"
+if [ -z $var ]
+then
+    echo "zero"
+else
+    echo "not zero"
+fi
+
+#-n length of string is not zero
+var="lakshmi"
+if [ -n $var ]
+then
+    echo "length is 7"
+else
+    echo "zero"
+fi
+
+#-a string operator
+#boolean AND logic
+n1=10
+n2=20
+if [ $n1 -gt 20 -a $n2 -lt 10 ]
+then
+    echo "logic works"
+else
+    echo "invalid"
+fi
+
+#Boolean AND operator
+n1=10
+n2=20
+if [ $n1 -gt 10 -a $n2 -lt 20 ]
+then
+    echo "logic works"
+elif [ $n1 -gt 20 -a $n2 -lt 10]
+    echo "elif block"
+else
+    echo "invalid"
+fi
+
+#shell loops 
+#While loop
+a=1
+while [ $a -le 5 ]
+do
+    echo $a
+    a=`expr $a + 1`
+done
+
+#For loop
+for i in 1 2 3 4
+do
+    sum=`expr $sum + $i`
+done
+echo $sum
+
+n= "1 2 3 4 5"
+for i in n
+do
+    sum=`expr $sum + $n`
+done
+echo $sum
+
+#untill loop
+
+a=1
+until [ $a -ge 5 ]
+do
+    echo $s
+    a=`expr $a +1`
+done
+echo $a
+
+#nested loop
+a=0
+while [ "$a" -lt 10 ]
+do
+    b="$a"
+    while [ "$b" -ge 0 ]
+    do
+        echo -n "$b"
+        b=`expr $b - 1`
+    done
+    echo
+    a=`expr $a + 1`
+done
+
+#program to check even or odd using script loop
+num="1 2 3 4 5 6 7 8"
+for i in $num
+do
+    result=`expr $i % 2`
+    if [ $result -eq 0 ]
+    then
+        echo "even"
+    else
+        echo "odd"
+    fi
+done
+
+#break
+
+a=0
+while [ $a -lt 10 ]
+do
+    echo $a
+    if [ $a -eq 5 ]
+    then
+        break
+    fi
+    a=`expr $a + 1`
+done
+
+for var1 in 1 2 3
+do
+    for var2 in 0 5
+    do
+        if [ $var1 -eq 2 -a $var2 -eq 0 ]
+        then
+            break 2
+        else
+            echo "$var1 $var2"
+        fi
+    done
+done
+
+#continue
+
+num="1 2 3 4 5 6 7"
+for n in num
+do
+    q=`expr $n % 2`
+    if[ $q -eq 0 ]
+    then
+        echo "is even"
+        continue
+    fi
+    echo "is odd"
+done
+
+# functions in scripting
+function hello{
+    echo "hi"
+    echo "hello"
+    echo "I am lashmi"
+}
+#initiliging function
+hello()
+
+race(){
+    echo "hi"
+    echo "hello"
+    echo "i am lakshmi"
+}
+race
+
+name(){
+    echo "what is your name? : $1"
+    echo "where are you from? : $2"
+}
+name lakshmi hyderabad
+
+play(){
+    echo "what is your name? $1"
+    return 10
+}
+play lakshmi
+ret=$? #exit saatus return call
+echo "the return value is $ret"
+
+#nested function
+function1(){
+    echo "1st function"
+    function2   
+}
+function2(){
+    echo "2nd function"
+}
+function1
