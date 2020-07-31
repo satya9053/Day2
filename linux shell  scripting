@@ -33,54 +33,54 @@ echo $(($i))
 
 i="lop"
 p="computer"
-if [[$i ="lop" && $p ="pc"]]
-then
-    echo "i have lop and pc"
-else
-    echo "i have only lop"
-fi
+  if [[$i ="lop" && $p ="pc"]]
+   then
+        echo "i have lop and pc"
+   else
+         echo "i have only lop"
+     fi
 
 term= 1
-if [ $term == 1]
-then
-    echo "hi every one"
-else
-    echo "bye"
-fi
+  if [ $term == 1]
+    then
+         echo "mMorning"
+     else
+          echo "Good bye"
+    fi
 
 # relational operator
-n=50
-if [ $n -eq 50 ] 
-then
-    echo "the no is equal to 50"
-else
-    echo "the no is not equal to 50"
-fi
+    n=50
+   if [ $n -eq 50 ] 
+     then
+         echo "the no is equal to 50"
+      else
+         echo "the no is not equal to 50"
+  fi
 
-#gt operator
+
 if [ $n -gt 2 ]
-then
-    echo "if bolck"
-else
-    echo "else block"
-fi
+    then
+       echo "if bolck"
+     else
+        echo "else block"
+    fi
 
 #ge operator
-g=3
-if[ $g -ge 3 ]
-then
-    echo "true"
-else
-    echo "false"
-fi
+   g=5
+     if[ $g -ge 5]
+      then
+         echo "true"
+      else
+          echo "false"
+   fi
 
 #string operator
-s="banana"
-if [ $s = "banana" ]
+s="tamarinda"
+if [ $s = "tamarinda" ]
 then
-    echo "it is banana"
+    echo "it is tamarinda"
 else
-    echo "it's not banana"
+    echo "it's not tamarinda"
 fi
 
 val=100
@@ -99,8 +99,8 @@ else
     echo "not equal to 50"
 fi
 
-str1="box"
-str2="pen"
+str1="boom"
+str2="bang"
 if [ $str1 < $str2 ]
 then
     echo "less than"
@@ -108,8 +108,8 @@ else
     echo "not less than"
 fi
 
-str1="box"
-str2="pen"
+str1="boom"
+str2="bang"
 if [ $str1 > $str2 ]
 then
     echo "less than"
@@ -118,14 +118,14 @@ else
 fi
 
 val=""
-if [ -z $var ]
+if [ -z $val ]
 then
     echo "zero"
 else
     echo "not zero"
 fi
 
-p="pen"
+p="bang"
 if [ -z $val ]
 then
     echo "zero"
@@ -181,7 +181,7 @@ do
 done
 echo $sum
 
-n= "1 2 3 4 5"
+n= "1 2 3 4 5 6 7 8 9 0"
 for i in n
 do
     sum=`expr $sum + $n`
@@ -199,7 +199,7 @@ done
 echo $a
 
 #nested loop
-a=0
+a=3
 while [ "$a" -lt 10 ]
 do
     b="$a"
@@ -215,7 +215,7 @@ done
 #peven or odd using scripting of loop
 
 
-num="1 2 3 4 5 6 7 8"
+num="1 2 3 4 5"
 for i in $num
 do
     result=`expr $i % 2`
@@ -273,26 +273,30 @@ function hello{
     echo "hello"
     echo "this is satya"
 }
-#initiliging function
-hello()
 
-race(){
+
+  hello()
+
+   race(){
     echo "hi"
     echo "hello"
     echo "i am satya"
-}
-race
+   }
+   race
 
-name(){
-    echo "what is your name? : $1"
-    echo "where are you from? : $2"
+ name(){
+       echo "what is your name? : $2"
+       
+       echo "where are you from? : $3"
 }
 name satya 
 
 play(){
-    echo "what is your name? $1"
+    echo "what is your name? $2"
     return 10
 }
+
+
 play satya
 ret=$? 
 #exit saatus return call
