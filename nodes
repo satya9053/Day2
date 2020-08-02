@@ -1,0 +1,260 @@
+
+node.js
+
+//FS = file system in node js
+
+var fs = require('fs')
+
+fs.readFile('calc.js','utf8',function(err,data)
+{
+    console.log(data);
+})
+fs.readFile('app.js','utf8',function(err,data)
+{
+    console.log(data);
+});
+fs.writeFile('calx.js','console.log("hii vijji")',function(err)
+{
+    console.log("file created");
+})
+
+//append files
+
+fs.appendFile('calx.js', 'Hello content!', function (err) 
+{
+  if (err) throw err;
+  console.log('Saved!');
+});
+
+//delete files
+
+fs.unlink('calx.js',function(err)
+{
+    console.log("file deleted");
+})
+var fs = require('fs');
+
+//new file.txt:
+
+fs.open('gitnode.txt', 'w', function (err, file)
+{
+  if (err) throw err;
+  console.log('Saved!');
+});
+
+//Rename "gitnode.txt" into "node1.txt":
+
+fs.rename('gitnode.txt', 'node1.txt', function (err) 
+{
+    if (err) throw err;
+    console.log('File Renamed!');
+  });
+  
+  
+ // methods of file system in nodejs
+
+var fs=require('fs');
+let data="This is fine saturday";
+let sai="I got selected in"+"DXC TECHNOLOGY";
+
+fs.writeFileSync("node.txt",data)
+fs.writeFileSync("gitnode.js",sai)
+console.log("File has been created sucessfully");
+console.log(fs.readFileSync('node.txt','utf8'));
+console.log(fs.readFileSync('gitnode.js','utf8')); 
+
+const fs = require('fs');
+fs.readFile('node.txt', (err, data) =>
+{
+  if (err) throw err;
+  console.log(data);
+});
+fs.unlinkSync('node.txt');
+
+// buffers  in nodejs
+
+var buf = new Buffer("programming in node.js","utf-8");
+buf=new Buffer(256);
+len=buf.write("node is not a programming languagee");
+console.log("buffer unicode return as"+" "+buf );
+console.log("buffer unicode are"+len);
+buf=new Buffer(26);
+
+for(var i=0;i<26;i++)
+{
+    buf[i]=i+65
+}
+console.log(buf.toString('ascii'))
+console.log(buf.toString('ascii',0,5))
+console.log(buf.toString('utf8',0,6))
+console.log(buf.toString(undefined,0,10))
+
+//concate two buffers
+
+var buffer1 = new Buffer('node js learning ');
+var buffer2 = new Buffer('Simply Easy Learning');
+var buffer3 = Buffer.concat([buffer1,buffer2]);
+console.log("buffer3 content: " + buffer3.toString());
+
+//compare buffers
+
+var buffer1 = new Buffer('satya');
+var buffer2 = new Buffer('Mandapati');
+var result = buffer1.compare(buffer2);
+
+if(result < 0) 
+{
+   console.log(buffer1 +" comes before " + buffer2);
+} else if(result === 0) 
+{
+   console.log(buffer1 +" is same as " + buffer2);
+}
+else
+{
+   console.log(buffer1 +" comes after " + buffer2);
+}
+
+//copying the buffer from one to another
+
+var buffer1 = new Buffer('satya');
+var buffer2 = new Buffer(3);
+buffer1.copy(buffer2);
+console.log("buffer2 content: " + buffer2.toString());
+//lenghth of the buffer using jSON()
+
+var buffer = new Buffer('Alchemy');
+console.log("buffer length: " + buffer.length);
+var buf = Buffer.from('Alchemy');
+
+console.log(buf.toJSON());
+
+
+
+1, Work on node js buffers?
+
+Buffer:-Buffer is a in-built module for node js. It is used to handle binary data.
+
+Ex:-Convert the string "dfh" into a stream of binary data:
+
+var buf = Buffer.from('dfh');
+console.log(buf);
+
+o/p:-64 66 68
+
+2,Work on all possible file systems in node js?
+
+Read files
+Create files
+Update files
+Delete files
+Rename files
+Upload files
+
+Read Files:-
+
+The fs.readFile() method is used to read files on your computer.
+
+Example
+
+var http = require('http');
+var fs = require('fs');
+http.createServer(function (req, res) {
+  fs.readFile('demofile1.html', function(err, data) {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.write(data);
+    return res.end();
+  });
+}).listen(8080);
+
+
+Create Files:-
+
+The File System module has methods for creating new files:
+
+fs.appendFile()
+fs.open()
+fs.writeFile()
+
+The fs.appendFile() method appends specified content to a file. If the file does not exist, the file will be created:
+
+Example:-
+
+var fs = require('fs');
+
+fs.appendFile('mynewfile1.txt', 'Hello content!', function (err) {
+  if (err) throw err;
+  console.log('Saved!');
+});
+
+The fs.open() method takes a "flag" as the second argument, if the flag is "w" for "writing", the specified file is opened for writing. 
+If the file does not exist, an empty file is created:
+
+Example:-
+
+var fs = require('fs');
+
+fs.open('mynewfile2.txt', 'w', function (err, file) {
+  if (err) throw err;
+  console.log('Saved!');
+});
+
+//The fs.writeFile() method replaces the specified file and content if it exists. If the file does not exist, a new file, containing the 
+specified content, will be created:
+
+Example:-
+
+var fs = require('fs');
+
+fs.writeFile('mynewfile3.txt', 'Hello content!', function (err) 
+{
+  if (err) throw err;
+  console.log('Saved!');
+});
+
+//Update Files:-
+//fs.appendFile() and fs.writefile() are used
+
+var fs = require('fs');
+
+fs.appendFile('my.txt', ' new txt.', function (err) 
+{
+  if (err) throw err;
+  console.log('Updated!');
+});
+
+//The fs.writeFile() method replaces the specified file and content:
+
+var fs = require('fs');
+
+fs.writeFile('my.txt', 'new file', function (err)
+{
+  if (err) throw err;
+  console.log('Replaces');
+});
+
+Delete Files:-
+
+Delete "mynewfile2.txt":
+
+var fs = require('fs');
+
+fs.unlink('myfile1.txt', function (err)
+{
+  if (err) throw err;
+  console.log('deleted');
+});
+
+//Rename Files node.js
+
+
+Rename "mynewfile1.txt" to "myrenamedfile.txt":
+
+var fs = require('fs');
+
+fs.rename('mynewfile1.txt', 'myrenamedfile.txt', function (err) {
+  if (err) throw err;
+  console.log('File Renamed!');
+});
+
+
+
