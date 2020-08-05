@@ -1,0 +1,38 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20200728181930
+Username: CSCMWS\smandapati7
+RunAs User: CSCMWS\smandapati7
+Configuration Name: 
+Machine: IN-5CG0255ZGX (Microsoft Windows NT 10.0.18363.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 18148
+PSVersion: 5.1.18362.752
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.18362.752
+BuildVersion: 10.0.18362.752
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\smandapati7\OneDrive - DXC Production\Documents\PowerShell_transcript.IN-5CG0255ZGX.r_EMnqyE.20200728181930.txt
+PS C:\windows\system32> $x=30
+PS C:\windows\system32> if($x -le 20){
+write-host("this is If statement")} else 
+
+At line:2 char:41
++ write-host("this is If statement")} else
++                                         ~
+Missing statement block after 'else' keyword.
+At line:2 char:41
++ write-host("this is If statement")} else
++                                         ~
+Missing statement block after 'else' keyword.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingStatementBlockAfterElse
+
+PS C:\windows\system32> if($x -le 20){
+write-host("this is If statement")} else 
+{write-host("this is else statement")}
+this is else statement
