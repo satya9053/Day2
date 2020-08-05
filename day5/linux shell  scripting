@@ -1,0 +1,314 @@
+a=2
+b=7
+c=$a+$b
+d=$a-$b
+e=$a*$b
+echo $(($c))
+echo $(($d))
+echo $(($e))
+
+n=20
+echo $((n+=30))
+echo $((n-=30))
+echo $((n*=2))
+echo $((n/=33))
+
+
+i=30
+echo "per increment : "$((++i+10))
+
+#post increment operator
+i=40
+echo "post increment : "$((i++))
+echo $(($i))
+ 
+
+i=5
+echo "per decrement : " $((--i))
+
+i=6
+echo "post decrement" $((i--))
+echo $(($i))
+
+
+i="lop"
+p="computer"
+  if [[$i ="lop" && $p ="pc"]]
+   then
+        echo "i have lop and pc"
+   else
+         echo "i have only lop"
+     fi
+
+term= 1
+  if [ $term == 1]
+    then
+         echo "mMorning"
+     else
+          echo "Good bye"
+    fi
+
+# relational operator
+    n=50
+   if [ $n -eq 50 ] 
+     then
+         echo "the no is equal to 50"
+      else
+         echo "the no is not equal to 50"
+  fi
+
+
+if [ $n -gt 2 ]
+    then
+       echo "if bolck"
+     else
+        echo "else block"
+    fi
+
+#ge operator
+   g=5
+     if[ $g -ge 5]
+      then
+         echo "true"
+      else
+          echo "false"
+   fi
+
+#string operator
+s="tamarinda"
+if [ $s = "tamarinda" ]
+then
+    echo "it is tamarinda"
+else
+    echo "it's not tamarinda"
+fi
+
+val=100
+if [ $val == 100 ]
+then
+    echo "equal to 100"
+else
+    echo "not equal to 100"
+fi
+
+val=100
+if [ $val != 50 ]
+then
+    echo "equal to 50"
+else
+    echo "not equal to 50"
+fi
+
+str1="boom"
+str2="bang"
+if [ $str1 < $str2 ]
+then
+    echo "less than"
+else
+    echo "not less than"
+fi
+
+str1="boom"
+str2="bang"
+if [ $str1 > $str2 ]
+then
+    echo "less than"
+else
+    echo "not less than"
+fi
+
+val=""
+if [ -z $val ]
+then
+    echo "zero"
+else
+    echo "not zero"
+fi
+
+p="bang"
+if [ -z $val ]
+then
+    echo "zero"
+else
+    echo "not zero"
+fi
+
+#-n length of string is not zero
+va="satya"
+if [ -n $val ]
+then
+    echo "length is 7"
+else
+    echo "zero"
+fi
+
+#-a string operator
+#boolean AND logic
+n1=10
+n2=20
+if [ $n1 -gt 20 -a $n2 -lt 10 ]
+then
+    echo "logic works"
+else
+    echo "invalid"
+fi
+
+
+n1=10
+n2=20
+if [ $n1 -gt 10 -a $n2 -lt 20 ]
+then
+    echo "logic works"
+elif [ $n1 -gt 20 -a $n2 -lt 10]
+    echo "elif block"
+else
+    echo "invalid"
+fi
+
+# loops 
+
+a=1
+while [ $a -le 5 ]
+do
+    echo $a
+    a=`expr $a + 1`
+done
+
+#For loop
+for i in 1 2 3 4
+do
+    sum=`expr $sum + $i`
+done
+echo $sum
+
+n= "1 2 3 4 5 6 7 8 9 0"
+for i in n
+do
+    sum=`expr $sum + $n`
+done
+echo $sum
+
+#untill loop
+
+a=1
+until [ $a -ge 5 ]
+do
+    echo $s
+    a=`expr $a +1`
+done
+echo $a
+
+#nested loop
+a=3
+while [ "$a" -lt 10 ]
+do
+    b="$a"
+    while [ "$b" -ge 0 ]
+    do
+        echo -n "$b"
+        b=`expr $b - 1`
+    done
+    echo
+    a=`expr $a + 1`
+done
+
+#peven or odd using scripting of loop
+
+
+num="1 2 3 4 5"
+for i in $num
+do
+    result=`expr $i % 2`
+    if [ $result -eq 0 ]
+    then
+        echo "even"
+    else
+        echo "odd"
+    fi
+done
+
+#break
+
+a=0
+while [ $a -lt 10 ]
+do
+    echo $a
+    if [ $a -eq 5 ]
+    then
+        break
+    fi
+    a=`expr $a + 1`
+done
+
+for val1 in 1 2 3
+do
+    for val2 in 0 5
+    do
+        if [ $val1 -eq 2 -a $val2 -eq 0 ]
+        then
+            break 2
+        else
+            echo "$va11 $val2"
+        fi
+    done
+done
+
+#continue
+
+num="1 2 3 4 5 6 7"
+for n in num
+do
+    q=`expr $n % 2`
+    if[ $q -eq 0 ]
+    then
+        echo "is even"
+        continue
+    fi
+    echo "is odd"
+done
+
+# functions in scripting
+function hello{
+    echo "hi"
+    echo "hello"
+    echo "this is satya"
+}
+
+
+  hello()
+
+   race(){
+    echo "hi"
+    echo "hello"
+    echo "i am satya"
+   }
+   race
+
+ name(){
+       echo "what is your name? : $2"
+       
+       echo "where are you from? : $3"
+}
+name satya 
+
+play(){
+    echo "what is your name? $2"
+    return 10
+}
+
+
+play satya
+ret=$? 
+#exit saatus return call
+echo "the return value is $ret"
+
+#nested 
+
+function1(){
+    echo "1st function"
+    function2   
+}
+function2(){
+    echo "2nd function"
+}
+function1
