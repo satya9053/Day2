@@ -1,0 +1,81 @@
+public class Practiece_program1 {
+
+	public static void main(String[] args) {
+		//Hello world program
+		System.out.println("Hello world!");//printing hello world statement
+
+	}
+
+}
+
+//Code to add and subtract two numbers in Java using methods
+public class Practiece_program2 {
+	//Creating a method called sum()
+	public void sum() {
+		int num_one = 5;
+		int num_two = 10;
+		System.out.println("The sum of two numbers = " +(num_one+num_two) );
+	}
+	//Creating a method called subtract()
+	public void subtract() {
+		int num_one = 5;
+		int num_two = 10;
+		System.out.println("The subtraction of two numbers = " +(num_one-num_two) );
+	}
+//Calling of two methods to get output
+	public static void main(String[] args) {
+		Practiece_program2 obj_one = new Practiece_program2();
+		obj_one.sum();
+		obj_one.subtract();
+	}
+
+}
+
+public class Practiece_program3 {
+	//Declaration of variables
+	int i = 25;
+	int j = 2;
+	//Checking if condition to two variables
+	public void Ifcondition() {
+	if (i<j) {
+		System.out.println(j+ " is greater than " +i);}
+		else {
+			System.out.println(i+ " is greater than " +j);
+		}
+	}
+	//Checking switch and break conditions using two variables
+	public void switchdemo() {
+		switch (i) 
+        { 
+        case 1:if(i<10) {
+            System.out.println("i is less than 10");} 
+            break; 
+        case 2: 
+        	if(i>10) {
+            System.out.println("i is greater than 10");} 
+            break;  
+        default: 
+            System.out.println("i is something"); 
+        } 
+	
+	}
+	//Checking while conditions using two variables
+	public void loopdemo() {
+		while(j<=i) {
+			System.out.println(j);
+			j=j+2;
+			while(j>20) {
+				continue;
+			}
+		}	
+	}
+//Printing all methods using a single object
+	public static void main(String[] args) {
+		Practiece_program3 obj = new Practiece_program3();
+		obj.switchdemo();
+		obj.Ifcondition();
+		obj.loopdemo();
+		
+	}
+
+}
