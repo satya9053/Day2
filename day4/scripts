@@ -1,1 +1,126 @@
 
+#Test program
+echo "programm to execute."
+echo "show some errors."
+echo \
+
+#Arithemetic operators
+x=10
+y=20
+echo "Sum of two no:"$(($x+$y))
+echo "Subtraction of two no:"$(($x-$y))
+echo "Mutiplication of two no:"$(($x*$y))
+echo "Division of two no:"$(($x/$y))
+echo "Modulus of two no:"$(($x%$y))
+echo "Increment of x:"$((++x))
+echo "Decrement of y:"$((--y))
+echo \
+
+#Relational operators and conditional statements
+#!/bin/bash 
+a=25
+b=25
+if(( $a==$b )) 
+then
+	echo "a is equal to b." 
+else
+	echo "a is not equal to b." 
+fi
+
+if(( $a!=$b )) 
+then
+	echo "a is not equal to b." 
+else
+	echo "a is equal to b." 
+fi
+
+if(( $a<$b )) 
+then
+	echo "a is less than b." 
+else
+	echo "a is not less than b." 
+fi
+
+if(( $a<=$b )) 
+then
+	echo "a is less than or equal to b." 
+else
+	echo "a is not less than or equal to b." 
+fi
+
+if(( $a>$b )) 
+then
+	echo "a is greater than b." 
+else
+	echo "a is not greater than b." 
+fi
+
+if(( $a>=$b )) 
+then
+	echo "a is greater than or equal to b." 
+else
+	echo "a is not greater than or equal to b." 
+fi
+echo \
+
+#Logical operators
+a=1
+b=0
+if(($a == "true" & $b == "true" )) 
+then
+	echo "Both are true." 
+else
+	echo "Both are not true." 
+fi
+
+if(($a == "true" || $b == "true" )) 
+then
+	echo " one of them is true." 
+else
+	echo "None of them is true." 
+fi
+
+if(( ! $a == "true" )) 
+then
+	echo " intially false." 
+else
+	echo " intially true."
+fi
+echo \
+#file test operators
+cat> balu.txt
+
+if [ -e $satya ] 
+then 
+	echo "File Exist" 
+else
+	echo "File doesnot exist" 
+fi 
+
+if [ -s $satya ] 
+then 
+	echo "The file is not empty." 
+else
+	echo "The file is empty." 
+fi 
+
+if [ -r $satya ] 
+then 
+	echo "The file has read access." 
+else
+	echo "The file does not has read access." 
+fi 
+
+if [ -w $satya ] 
+then 
+	echo "The file has write access." 
+else
+	echo "The file does not has write access." 
+fi 
+
+if [ -x satya ] 
+then 
+	echo "The file has execute access." 
+else
+	echo "The file does not has execute access." 
+fi 
