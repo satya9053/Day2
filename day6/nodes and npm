@@ -1,0 +1,76 @@
+ NPM is a package manager for Node.js packages, or modules if you like.Node Package Manager (npm) provides following
+  two main functionalities: Online repositories for node.js packages/modules which are searchable on search.nodejs.org. 
+  Command line utility to install Node.js packages, do version management and dependency management of Node.js packages.
+   To install npm we use command
+  npm install npm@latest -g
+  To install npm package we use -- npm install <package-name>
+  A list of all the public package names on npm.
+  Includes scoped packages
+  Sorted by dependent count
+  Uses npm's replicate.npmjs.com service.
+  Updated daily.
+
+  Node js buffer
+  Buffer objects are used to represent a fixed-length sequence of bytes. Many Node.js APIs support Buffers.
+  The Buffer class is a subclass of JavaScript's Uint8Array class and extends it with methods that cover additional 
+  use cases. Node.js APIs accept plain Uint8Arrays wherever Buffers are supported as well.
+  The Buffer class is within the global scope, making it unlikely that one would need to ever use require('buffer').Buffer.
+
+  //Creating a Buffer
+  var buffer = Buffer.alloc(8);
+  var buffer = Buffer.from([ 3, 6, 8, 5, 4, 0, 9]);
+  var buffer = Buffer.from("I'm a satya", "utf-8");
+
+  //  Writing buffers
+  buf = new Buffer(256);
+  len = buf.write("DXC Technology");
+  console.log("Octets written : "+  len);
+
+  //  Reading Buffers
+  buf = new Buffer(26);
+  for (var i = 0 ; i < 26 ; i++) {
+    buf[i] = i + 97;
+  }
+  console.log( buf.toString('ascii'));     
+  console.log( buf.toString('ascii',0,5));  
+  console.log( buf.toString('utf8',0,5));   
+  console.log( buf.toString(undefined,0,5));
+
+  // Convert Buffer to json
+  var buf = new Buffer('Hello Man');
+  var json = buf.toJSON(buf);
+  console.log(json);
+
+//File systems in node 
+
+  // Read data from files
+  
+  const fs = require('fs');//Import file module
+  fs.readFile('/tmp/hello.txt', { encoding: 'utf8' }, (err, content) => {
+  if(err) return console.error(err);
+  console.log(content);
+  });
+
+  // Read data from file synchronusly
+  
+  let content;
+  try {
+  content = fs.readFileSync('sync.txt', { encoding: 'utf8' });
+  } catch(err) 
+
+  //Deleting data from a file 
+  fs.unlink('file.js',function(err){
+  console.log("file delected");
+  });
+
+  //Rename the file 
+  fs.rename('hello.txt','name.txt',function(err){
+  if (err) throw err;
+  console.log('file Name changed');
+  });
+
+  //Append a file 
+  fs.appendFile('hello.txt','content', function(err) {
+  if (err) throw err;
+  console.log('saved');
+  });
